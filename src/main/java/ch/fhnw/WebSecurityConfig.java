@@ -19,7 +19,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .httpBasic()
                 .and()
-                .csrf().disable();
+                .csrf().disable()
+                .headers().disable(); //disable for h2-console
     }
 
     @Autowired
